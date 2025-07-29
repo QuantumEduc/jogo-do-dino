@@ -9,7 +9,7 @@ const gameAreaWidth = document.getElementById("gameArea").offsetWidth;
 function jump() {
     if (isjumping) return;
     isjumping = true;
-    dino.style.animation = "jump 0,5s ease-out";
+    dino.style.animation = "jump 0.5s ease-out";
     setTimeout( () => {
         dino.style.animation = "";
         isjumping = false
@@ -23,7 +23,7 @@ document.addEventListener("keydown", function(event) {
 
 function moveObstaculo() {
     let obstaculoPos = obstaculo.offsetLeft;
-    obstaculo.style.left = obstaculoPos - speed + "PX";
+    obstaculo.style.left = obstaculoPos - speed + "px";
     if (obstaculoPos <= -20) {
         obstaculo.style.left=gameAreaWidth + "px";
     }
@@ -33,7 +33,7 @@ checkCollision();
 
 function checkCollision() {
     const dinoRect = dino.getBoundingClientRect();
-    const obstaculoReact = obstaculo.getBoundingClientRect;
+    const obstaculoReact = obstaculo.getBoundingClientRect();
 
         if(
             dinoRect.right > obstaculoRect.left &&
