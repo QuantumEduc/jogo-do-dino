@@ -4,6 +4,7 @@
   height: 700px ;/*altura*/
   border: 5px solid black;
   position:absolute;
+  bottom: 10; 
 }
 
 #dino{
